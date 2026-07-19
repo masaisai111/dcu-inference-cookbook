@@ -8,6 +8,8 @@ DeepSeek-R1 是 DeepSeek 推出的推理强化模型，面向复杂推理、数�
 
 | 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 卡数 | 部署方式 | 启动命令 |
 | -------- | -------- | --------- | -------- | ---- | -------- | -------- |
+| [hygon/DeepSeek-R1-bf16](https://www.modelscope.cn/models/hygon/DeepSeek-R1-bf16) | BF16 | [0.15](../docker_images.md) | BW1100 | 16 | IFB | [**`>_`**](#deepseek-r1-bf16-ifb-bw1100-16x-vllm-015) |
+|                                                                                  | BF16 | [0.15](../docker_images.md) | BW1000 | 32 | IFB | [**`>_`**](#deepseek-r1-bf16-ifb-bw1000-32x-vllm-015) |
 | [hygon/DeepSeek-R1-Channel-FP8-w8a8](https://www.modelscope.cn/models/hygon/DeepSeek-R1-Channel-FP8-w8a8) | FP8 W8A8 | [0.15](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#deepseek-r1-channel-fp8-w8a8-ifb-bw1100-8x-vllm-015) |
 | [hygon/DeepSeek-R1-W4A8-V2_6](https://www.modelscope.cn/models/hygon/DeepSeek-R1-W4A8-V2_6) | INT4 W4A8 | [0.18](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#deepseek-r1-w4a8-v2_6-ifb-bw1100-8x-vllm-018) |
 |                                                                                              | INT4 W4A8 | [0.18](../docker_images.md) | BW1000 | 8 | IFB | [**`>_`**](#deepseek-r1-w4a8-v2_6-ifb-bw1000-8x-vllm-018) |
@@ -15,6 +17,104 @@ DeepSeek-R1 是 DeepSeek 推出的推理强化模型，面向复杂推理、数�
 | [hygon/DeepSeek-R1-0528-W4A8-V2](https://www.modelscope.cn/models/hygon/DeepSeek-R1-0528-W4A8-V2) | W4A8 | [0.15](../docker_images.md) | BW1000 | 8 | IFB | [**`>_`**](#deepseek-r1-w4a8-ifb-bw1000-8x-vllm-015) |
 
 ## 启动命令
+
+### DeepSeek-R1-bf16 IFB BW1100 16x vLLM 0.15
+
+```bash
+export VLLM_HOST_IP=XXX
+echo $VLLM_HOST_IP
+export VLLM_USE_FUSED_FILL_RMS_CAT=0
+export NCCL_SOCKET_IFNAME=ens19f0
+export GLOO_SOCKET_IFNAME=ens19f0
+export HIP_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export NCCL_IB_HCA=mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1,mlx5_4:1,mlx5_5:1,mlx5_6:1,mlx5_8:1,mlx5_9:1
+export NCCL_MIN_NCHANNELS=16
+export NCCL_MAX_NCHANNELS=16
+export NCCL_P2P_NVL_CHUNKSIZE=131072
+export VLLM_RPC_TIMEOUT=1800000
+export VLLM_NUMA_BIND=1
+export VLLM_RANK0_NUMA=0
+export VLLM_RANK1_NUMA=0
+export VLLM_RANK2_NUMA=1
+export VLLM_RANK3_NUMA=1
+export VLLM_RANK4_NUMA=2
+export VLLM_RANK5_NUMA=2
+export VLLM_RANK6_NUMA=3
+export VLLM_RANK7_NUMA=3
+export VLLM_USE_GLOBAL_CACHE13=1
+export VLLM_FUSED_MOE_CHUNK_SIZE=8192
+export VLLM_ZERO_OVERHEAD=1
+export VLLM_USE_PD_SPLIT=1
+export HIP_USE_GRAPH_QUEUE_POOL=1
+export VLLM_USE_LIGHTOP=1
+export SENDRECV_STREAM_WITH_COMPUTE=1
+export ALLREDUCE_STREAM_WITH_COMPUTE=1
+export GATHER_STREAM_WITH_COMPUTE=1
+export Allgather_Base_STREAM_WITH_COMPUTE=1
+export VLLM_USE_LIGHTOP_MOE_SUM=0
+export VLLM_USE_LIGHTOP_MOE_SUM_MUL_ADD=1
+
+vllm serve hygon/DeepSeek-R1-bf16 \
+  --trust-remote-code \
+  --distributed-executor-backend ray \
+  --dtype bfloat16 \
+  --tensor-parallel-size 16 \
+  --gpu-memory-utilization 0.9 \
+  --host 0.0.0.0 \
+  --max-model-len 40960 \
+  --disable-log-requests \
+  --block-size 64 \
+  --speculative_config '{"method": "mtp", "num_speculative_tokens": 3}' \
+  -cc '{"inductor_compile_config":{"combo_kernels": false}}'
+```
+
+### DeepSeek-R1-bf16 IFB BW1000 32x vLLM 0.15
+
+```bash
+export VLLM_HOST_IP=XXX
+echo $VLLM_HOST_IP
+export VLLM_USE_FUSED_FILL_RMS_CAT=0
+export NCCL_SOCKET_IFNAME=ens61f0np0
+export GLOO_SOCKET_IFNAME=ens61f0np0
+export HIP_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export NCCL_IB_HCA=mlx5_0:1,mlx5_2:1,mlx5_3:1,mlx5_4:1,mlx5_5:1,mlx5_6:1,mlx5_8:1,mlx5_9:1
+export NCCL_MIN_NCHANNELS=16
+export NCCL_MAX_NCHANNELS=16
+export NCCL_P2P_NVL_CHUNKSIZE=131072
+export VLLM_RPC_TIMEOUT=1800000
+export VLLM_NUMA_BIND=1
+export VLLM_RANK0_NUMA=0
+export VLLM_RANK1_NUMA=0
+export VLLM_RANK2_NUMA=0
+export VLLM_RANK3_NUMA=0
+export VLLM_RANK4_NUMA=1
+export VLLM_RANK5_NUMA=1
+export VLLM_RANK6_NUMA=1
+export VLLM_RANK7_NUMA=1
+export VLLM_USE_GLOBAL_CACHE13=1
+export VLLM_FUSED_MOE_CHUNK_SIZE=8192
+export VLLM_ZERO_OVERHEAD=1
+export VLLM_USE_PD_SPLIT=1
+export HIP_USE_GRAPH_QUEUE_POOL=1
+export VLLM_USE_LIGHTOP=1
+export SENDRECV_STREAM_WITH_COMPUTE=1
+export ALLREDUCE_STREAM_WITH_COMPUTE=1
+export GATHER_STREAM_WITH_COMPUTE=1
+export Allgather_Base_STREAM_WITH_COMPUTE=1
+
+vllm serve hygon/DeepSeek-R1-bf16 \
+  --trust-remote-code \
+  --distributed-executor-backend ray \
+  --dtype bfloat16 \
+  --tensor-parallel-size 32 \
+  --gpu-memory-utilization 0.9 \
+  --host 0.0.0.0 \
+  --max-model-len 40960 \
+  --disable-log-requests \
+  --block-size 64 \
+  --speculative_config '{"method": "mtp", "num_speculative_tokens": 3}' \
+  -cc '{"inductor_compile_config":{"combo_kernels": false}}'
+```
 
 ### DeepSeek-R1-Channel-FP8-w8a8 IFB BW1100 8x vLLM 0.15
 
