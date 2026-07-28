@@ -193,10 +193,19 @@
       <td align="center">🚧</td><td align="center">🚧</td><td align="center">🚧</td>
     </tr>
     <tr>
-      <td rowspan="14" align="center"><img src="https://cdn-avatars.huggingface.co/v1/production/uploads/62dc173789b4cf157d36ebee/i_pxzM2ZDo3Ub-BEgIkE9.png" height="40"/><br/>Z.ai</td>
+      <td rowspan="16" align="center"><img src="https://cdn-avatars.huggingface.co/v1/production/uploads/62dc173789b4cf157d36ebee/i_pxzM2ZDo3Ub-BEgIkE9.png" height="40"/><br/>Z.ai</td>
+      <td rowspan="2">GLM-5.2</td>
+      <td>vLLM</td>
+      <td align="center">🚧</td><td align="center"><a href="docs/model-deployment/vllm/glm-5.2.md">✅</a></td><td align="center"><a href="docs/model-deployment/vllm/glm-5.2.md">✅</a></td>
+    </tr>
+    <tr>
+      <td>SGLang</td>
+      <td align="center">🚧</td><td align="center">🚧</td><td align="center">🚧</td>
+    </tr>
+    <tr>
       <td rowspan="2">GLM-5.1</td>
       <td>vLLM</td>
-      <td align="center">🚧</td><td align="center">🚧</td><td align="center"><a href="docs/model-deployment/vllm/glm-5.1.md">✅</a></td>
+      <td align="center">🚧</td><td align="center"><a href="docs/model-deployment/vllm/glm-5.1.md">✅</a></td><td align="center"><a href="docs/model-deployment/vllm/glm-5.1.md">✅</a></td>
     </tr>
     <tr>
       <td>SGLang</td>
@@ -264,7 +273,7 @@
     </tr>
     <tr>
       <td>SGLang</td>
-      <td align="center">-</td><td align="center">-</td><td align="center">-</td>
+      <td align="center">-</td><td align="center">-</td><td align="center"><a href="docs/model-deployment/sglang/hunyuan-v3.md">✅</a></td>
     </tr>
     <tr>
       <td rowspan="2" align="center"><img src="https://cdn-avatars.huggingface.co/v1/production/uploads/641c1e77c3983aa9490f8121/X1yT2rsaIbR9cdYGEVu0X.jpeg" height="40"/><br/>Moonshot AI</td>
