@@ -10,9 +10,9 @@ GLM-5 是智谱 AI 推出的新一代大语言模型，在中文理解、长文�
 | -------- | -------- | ----------- | -------- | ---- | -------- | -------- |
 | [hygon/GLM-5-Channel-INT4-w4a8](https://www.modelscope.cn/models/hygon/GLM-5-Channel-INT4-w4a8) | INT4 W4A8 | 0.5.10 | BW1000 |  8 | IFB | [**`>_`**](#glm-5-channel-int4-w4a8-ifb-bw1000-8x-sglang-0510) |
 |                                                                                                 | INT4 W4A8 | 0.5.10 | BW1000 | 32 | 2P2D| [**`>_`**](#glm-5-channel-int4-w4a8-2p2d-bw1000-32x-sglang-0510) |
-| [hygon/GLM-5-Channel-INT8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5-Channel-INT8-w8a8) | INT8 W8A8 | 0.5.10 | BW1100 |  8 | IFB | [**`>_`**](#glm-5-channel-int8-w8a8-ifb-bw1100-8x-sglang-0510) |
+| [hygon/GLM-5-Channel-INT8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5-Channel-INT8-w8a8) | INT8 W8A8 | [0.5.10](../docker_images.md) | BW1100 |  8 | IFB | [**`>_`**](#glm-5-channel-int8-w8a8-ifb-bw1100-8x-sglang-0510) |
 |                                                                                                 | INT8 W8A8 | 0.5.10 | BW1100 | 24 | 1P2D| [**`>_`**](#glm-5-channel-int8-w8a8-1p2d-bw1100-24x-sglang-0510) |
-| [hygon/GLM-5-Channel-FP8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5-Channel-FP8-w8a8)   |  FP8 W8A8 | 0.5.10 | BW1100 |  8 | IFB | [**`>_`**](#glm-5-channel-fp8-w8a8-ifb-bw1100-8x-sglang-0510)  |
+| [hygon/GLM-5-Channel-FP8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5-Channel-FP8-w8a8)   |  FP8 W8A8 | [0.5.10](../docker_images.md) | BW1100 |  8 | IFB | [**`>_`**](#glm-5-channel-fp8-w8a8-ifb-bw1100-8x-sglang-0510)  |
 |                                                                                                 |  FP8 W8A8 | 0.5.10 | BW1100 | 24 | 1P2D| [**`>_`**](#glm-5-channel-fp8-w8a8-1p2d-bw1100-24x-sglang-0510)  |
 
 ## 启动命令
