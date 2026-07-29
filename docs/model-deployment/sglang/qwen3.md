@@ -8,7 +8,7 @@ Qwen3 是阿里通义千问第三代大语言模型，支持 0.6B ~ 235B 多种�
 
 | 模型权重 | 量化方式 | SGLang 版本 | 推荐硬件 | 卡数 | 部署方式 | 启动命令 |
 | -------- | -------- | ----------- | -------- | ---- | -------- | -------- |
-| [Qwen/Qwen3-8B](https://www.modelscope.cn/models/Qwen/Qwen3-8B) | BF16 | 0.5.10 | BW1000 | 1x | IFB | [**\`>_\`**](#qwen3-8b-ifb-bw1000-1x-sglang-0510) |
+| [Qwen/Qwen3-8B](https://www.modelscope.cn/models/Qwen/Qwen3-8B) | BF16 | [0.5.10](../docker_images.md) | BW1000 | 1x | IFB | [**\`>_\`**](#qwen3-8b-ifb-bw1000-1x-sglang-0510) |
 | [Qwen/Qwen3-32B](https://www.modelscope.cn/models/Qwen/Qwen3-32B) | BF16 | 0.5.10 | BW1100 | 2x | IFB | [**\`>_\`**](#qwen3-32b-ifb-bw1100-2x-sglang-0510) |
 | [Qwen/Qwen3-235B-A22B](https://www.modelscope.cn/models/Qwen/Qwen3-235B-A22B) | BF16 | 0.5.10 | BW1100 | 4x | IFB | [**\`>_\`**](#qwen3-235b-a22b-ifb-bw1100-4x-sglang-0510) |
 
