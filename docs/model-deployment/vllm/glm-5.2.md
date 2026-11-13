@@ -8,25 +8,25 @@ GLM-5.2 是智谱 AI 推出的新一代大语言模型，在中文理解、长�
 
 | 模型权重 | 量化方式 | vLLM 镜像 | 推荐硬件 | 卡数 | 部署方式 | 启动命令 |
 | -------- | -------- | --------- | -------- | ---- | -------- | -------- |
-| [ZhipuAI/GLM-5.2](https://www.modelscope.cn/models/ZhipuAI/GLM-5.2) | BF16 | 0.28.1 | BW1100 | 16 | IFB | [**`>_`**](#glm-52-ifb-bw1100-16x-vllm-0281) |
-|  | BF16 | 0.28.1 | BW1000 | 32 | IFB | [**`>_`**](#glm-52-ifb-bw1000-32x-vllm-0281) |
-|  | BF16 | 0.28.1 | K100_AI | 32 | IFB | [**`>_`**](#glm-52-ifb-k100_ai-32x-vllm-0281) |
-| [hygon/GLM-5.2-Channel-INT4-w4a8](https://www.modelscope.cn/models/hygon/GLM-5.2-Channel-INT4-w4a8) | INT4 W4A8 | 0.28.1 | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1100-8x-vllm-0281) |
-|  | INT4 W4A8 | 0.28.1 | BW1000 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1000-8x-vllm-0281) |
-|  | INT4 W4A8 | 0.28.1 | K100_AI | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-k100_ai-8x-vllm-0281) |
+| [ZhipuAI/GLM-5.2](https://www.modelscope.cn/models/ZhipuAI/GLM-5.2) | BF16 | 0.28.1(未发版) | BW1100 | 16 | IFB | [**`>_`**](#glm-52-ifb-bw1100-16x-vllm-0281未发版) |
+|  | BF16 | 0.28.1(未发版) | BW1000 | 32 | IFB | [**`>_`**](#glm-52-ifb-bw1000-32x-vllm-0281未发版) |
+|  | BF16 | 0.28.1(未发版) | K100_AI | 32 | IFB | [**`>_`**](#glm-52-ifb-k100_ai-32x-vllm-0281未发版) |
+| [hygon/GLM-5.2-Channel-INT4-w4a8](https://www.modelscope.cn/models/hygon/GLM-5.2-Channel-INT4-w4a8) | INT4 W4A8 | 0.28.1(未发版) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1100-8x-vllm-0281未发版) |
+|  | INT4 W4A8 | 0.28.1(未发版) | BW1000 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1000-8x-vllm-0281未发版) |
+|  | INT4 W4A8 | 0.28.1(未发版) | K100_AI | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-k100_ai-8x-vllm-0281未发版) |
 |  | INT4 W4A8 | [0.21](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1100-8x-vllm-021) |
 |  | INT4 W4A8 | [0.21](../docker_images.md) | BW1000 | 16 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1000-16x-vllm-021) |
 |  | INT4 W4A8 | [0.18](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1100-8x-vllm-018) |
 |  | INT4 W4A8 | [0.18](../docker_images.md) | BW1000 | 16 | PP2+TP8 | [**`>_`**](#glm-52-channel-int4-w4a8-pp2tp8-bw1000-16x-vllm-018) |
 |  | INT4 W4A8 | [0.15](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int4-w4a8-ifb-bw1100-8x-vllm-015) |
-| [hygon/GLM-5.2-Channel-FP8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5.2-Channel-FP8-w8a8) | FP8 W8A8 | 0.28.1 | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-fp8-w8a8-ifb-bw1100-8x-vllm-0281) |
+| [hygon/GLM-5.2-Channel-FP8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5.2-Channel-FP8-w8a8) | FP8 W8A8 | 0.28.1(未发版) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-fp8-w8a8-ifb-bw1100-8x-vllm-0281未发版) |
 |  | FP8 W8A8 | [0.21](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-fp8-w8a8-ifb-bw1100-8x-vllm-021) |
 |  | FP8 W8A8 | [0.21](../docker_images.md) | BW1100 | 16 | 1P1D | [**`>_`**](#glm-52-channel-fp8-w8a8-1p1d-bw1100-16x-vllm-021) |
 |  | FP8 W8A8 | [0.18](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-fp8-w8a8-ifb-bw1100-8x-vllm-018) |
 |  | FP8 W8A8 | [0.15](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-fp8-w8a8-ifb-bw1100-8x-vllm-015) |
-| [hygon/GLM-5.2-Channel-INT8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5.2-Channel-INT8-w8a8) | INT8 W8A8 | 0.28.1 | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1100-8x-vllm-0281) |
-|  | INT8 W8A8 | 0.28.1 | BW1000 | 16 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1000-16x-vllm-0281) |
-|  | INT8 W8A8 | 0.28.1 | K100_AI | 16 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-k100_ai-16x-vllm-0281) |
+| [hygon/GLM-5.2-Channel-INT8-w8a8](https://www.modelscope.cn/models/hygon/GLM-5.2-Channel-INT8-w8a8) | INT8 W8A8 | 0.28.1(未发版) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1100-8x-vllm-0281未发版) |
+|  | INT8 W8A8 | 0.28.1(未发版) | BW1000 | 16 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1000-16x-vllm-0281未发版) |
+|  | INT8 W8A8 | 0.28.1(未发版) | K100_AI | 16 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-k100_ai-16x-vllm-0281未发版) |
 |  | INT8 W8A8 | [0.21](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1100-8x-vllm-021) |
 |  | INT8 W8A8 | [0.21](../docker_images.md) | BW1000 | 16 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1000-16x-vllm-021) |
 |  | INT8 W8A8 | [0.18](../docker_images.md) | BW1100 | 8 | IFB | [**`>_`**](#glm-52-channel-int8-w8a8-ifb-bw1100-8x-vllm-018) |
@@ -36,7 +36,7 @@ GLM-5.2 是智谱 AI 推出的新一代大语言模型，在中文理解、长�
 
 ## 启动命令
 
-### GLM-5.2 IFB BW1100 16x vLLM 0.28.1
+### GLM-5.2 IFB BW1100 16x vLLM 0.28.1(未发版)
 
 总计 16 卡，2 个节点，每个节点 8 卡；各节点执行对应 rank 命令，`MASTER_ADDR` 为 rank 0 节点地址，所有节点使用相同的 `MASTER_ADDR` 和 `MASTER_PORT`。
 
@@ -97,7 +97,7 @@ vllm serve ZhipuAI/GLM-5.2 \
   --headless
 ```
 
-### GLM-5.2 IFB BW1000 32x vLLM 0.28.1
+### GLM-5.2 IFB BW1000 32x vLLM 0.28.1(未发版)
 
 总计 32 卡，4 个节点，每个节点 8 卡；各节点执行对应 rank 命令，`MASTER_ADDR` 为 rank 0 节点地址，所有节点使用相同的 `MASTER_ADDR` 和 `MASTER_PORT`。
 
@@ -216,7 +216,7 @@ vllm serve ZhipuAI/GLM-5.2 \
   --headless
 ```
 
-### GLM-5.2 IFB K100_AI 32x vLLM 0.28.1
+### GLM-5.2 IFB K100_AI 32x vLLM 0.28.1(未发版)
 
 总计 32 卡，4 个节点，每个节点 8 卡；各节点执行对应 rank 命令，`MASTER_ADDR` 为 rank 0 节点地址，所有节点使用相同的 `MASTER_ADDR` 和 `MASTER_PORT`。
 
@@ -331,7 +331,7 @@ vllm serve ZhipuAI/GLM-5.2 \
   --headless
 ```
 
-### GLM-5.2-Channel-INT4-w4a8 IFB BW1100 8x vLLM 0.28.1
+### GLM-5.2-Channel-INT4-w4a8 IFB BW1100 8x vLLM 0.28.1(未发版)
 
 ```bash
 export NCCL_GRAPH_MIXING_SUPPORT=1
@@ -359,7 +359,7 @@ vllm serve hygon/GLM-5.2-Channel-INT4-w4a8 \
   --max-num-seqs 64
 ```
 
-### GLM-5.2-Channel-INT4-w4a8 IFB BW1000 8x vLLM 0.28.1
+### GLM-5.2-Channel-INT4-w4a8 IFB BW1000 8x vLLM 0.28.1(未发版)
 
 ```bash
 export NCCL_GRAPH_MIXING_SUPPORT=1
@@ -387,7 +387,7 @@ vllm serve hygon/GLM-5.2-Channel-INT4-w4a8 \
   --max-num-seqs 64
 ```
 
-### GLM-5.2-Channel-INT4-w4a8 IFB K100_AI 8x vLLM 0.28.1
+### GLM-5.2-Channel-INT4-w4a8 IFB K100_AI 8x vLLM 0.28.1(未发版)
 
 ```bash
 export NCCL_GRAPH_MIXING_SUPPORT=1
@@ -629,7 +629,7 @@ vllm serve hygon/GLM-5.2-Channel-INT4-w4a8 \
   --speculative_config '{"method": "mtp", "num_speculative_tokens": 2, "quantization": "slimquant_w4a8_marlin"}'
 ```
 
-### GLM-5.2-Channel-FP8-w8a8 IFB BW1100 8x vLLM 0.28.1
+### GLM-5.2-Channel-FP8-w8a8 IFB BW1100 8x vLLM 0.28.1(未发版)
 
 ```bash
 export LMSLIM_USE_GLOBAL_MOE_CACHE=1
@@ -831,7 +831,7 @@ vllm serve hygon/GLM-5.2-Channel-FP8-w8a8 \
   --speculative_config '{"method": "mtp", "num_speculative_tokens": 2, "quantization": "slimquant_marlin"}'
 ```
 
-### GLM-5.2-Channel-INT8-w8a8 IFB BW1100 8x vLLM 0.28.1
+### GLM-5.2-Channel-INT8-w8a8 IFB BW1100 8x vLLM 0.28.1(未发版)
 
 ```bash
 
@@ -851,7 +851,7 @@ vllm serve hygon/GLM-5.2-Channel-INT8-w8a8 \
   --max-num-seqs 64
 ```
 
-### GLM-5.2-Channel-INT8-w8a8 IFB BW1000 16x vLLM 0.28.1
+### GLM-5.2-Channel-INT8-w8a8 IFB BW1000 16x vLLM 0.28.1(未发版)
 
 在各节点分别执行对应命令；`MASTER_ADDR` 为 rank 0 节点地址，各节点使用相同的 `MASTER_PORT`。数据并行地址和端口占位符如有使用，也应在各节点保持一致。
 
@@ -920,7 +920,7 @@ vllm serve hygon/GLM-5.2-Channel-INT8-w8a8 \
   --max-num-seqs 64
 ```
 
-### GLM-5.2-Channel-INT8-w8a8 IFB K100_AI 16x vLLM 0.28.1
+### GLM-5.2-Channel-INT8-w8a8 IFB K100_AI 16x vLLM 0.28.1(未发版)
 
 在各节点分别执行对应命令；`MASTER_ADDR` 为 rank 0 节点地址，各节点使用相同的 `MASTER_PORT`。数据并行地址和端口占位符如有使用，也应在各节点保持一致。
 
@@ -1437,7 +1437,7 @@ curl http://localhost:8000/v1/chat/completions \
   }'
 ```
 
-### GLM-5.2 BF16（vLLM 0.28.1）
+### GLM-5.2 BF16（vLLM 0.28.1(未发版)）
 
 ```bash
 curl http://localhost:8000/v1/chat/completions \
